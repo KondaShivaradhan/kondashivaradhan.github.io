@@ -21,6 +21,10 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
+    #mess
+    {
+        height: 70px;
+    }
 }
 
 #iabout {
@@ -469,5 +473,5 @@ body {
 .php {
     padding-right: 10px;
     width: 0%;
-    background-color: #808080;
+    background-color: #668d99;
 }
