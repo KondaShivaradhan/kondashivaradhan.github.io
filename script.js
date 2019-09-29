@@ -1,66 +1,3 @@
-
-//table hover
-/* function c1() {
-     document.getElementById('table').style.background = "url('https://www.mykonosgrand.gr/wp-content/uploads/2014/05/Beautiful-Nature-Wallpapers-for-Background-HD-Wallpaper.jpg')";
-     document.getElementById('table').style.transition = "all 0.5s";
-     document.getElementById('table').style.backgroundSize = "cover";
- }
-
- function c2() {
-     document.getElementById('table').style.background = "url('http://www.hdnicewallpapers.com/Walls/Big/Creative/Blue_and_White_Creative_Wall_Paint_HD_Wallpaper_Background.jpg')";
-     document.getElementById('table').style.transition = "all 0.5s";
-     document.getElementById('table').style.backgroundSize = "cover";
- }
-
- function c3() {
-     document.getElementById('table').style.background = "url('https://backgrounddownload.com/wp-content/uploads/2018/09/background-hd-images-free-download-7.jpg')";
-     document.getElementById('table').style.transition = "all 0.5s";
-     document.getElementById('table').style.backgroundSize = "cover";
- }
-
- function c4() {
-     document.getElementById('table').style.background = "url('http://paper-backgrounds.com/textureimages/2013/10/abstract-red-leather-background-hd.jpg')";
-     document.getElementById('table').style.transition = "all 0.5s";
-     document.getElementById('table').style.backgroundSize = "cover";
- }
-
- function c5() {
-     document.getElementById('table').style.background = "url('https://www.backgroundcheckall.com/wp-content/uploads/2017/12/background-hd-images-for-photoshop-14.jpg')";
-     document.getElementById('table').style.transition = "all 0.5s";
-     document.getElementById('table').style.backgroundSize = "cover";
- }
-
- function c6() {
-     document.getElementById('table').style.background = "url('https://wallpaperplay.com/walls/full/6/e/d/28206.jpg')";
-     document.getElementById('table').style.transition = "all 0.5s";
-     document.getElementById('table').style.backgroundSize = "cover";
- }
-
- function bh() {
-     document.getElementById("bh").style.top = "0px";
-     document.getElementById("bhh").style.top = "40%";
-     document.getElementById("bha").style.top = "40%";
- }
-
- function bhh() {
-     document.getElementById("bh").style.top = "40%";
-     document.getElementById("bhh").style.top = "0px";
-     document.getElementById("bha").style.top = "40%";
-
- }
-
- function bha() {
-     document.getElementById("bh").style.top = "40%";
-     document.getElementById("bhh").style.top = "40%";
-     document.getElementById("bha").style.top = "0px";
- }
-
- function bhc() {
-     document.getElementById("bh").style.top = "40%";
-     document.getElementById("bhh").style.top = "40%";
-     document.getElementById("bha").style.top = "40%";
- }
-*/
 $(document).on("click", 'a[href^="#"]', function (event) {
     event.preventDefault();
 
@@ -76,6 +13,7 @@ $("#article", "#img").ready(function () {
 });
 
 function sun() {
+
     var sg = document.getElementById("svg");
     sg.style.fill = "rgb(71,78,93)";
 
@@ -86,10 +24,15 @@ function sun() {
 
 }
 window.addEventListener("load", function () {
-
-    var load_screen = document.getElementById("loading");
-    document.getElementById("loading").style.display = "none";
-
+    var loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
+    document.getElementById("mainl").innerHTML = "LOADED!";
+    document.getElementById("nonel").style.display = "none";
+    document.getElementById("nonel1").style.display = "none";
+    document.getElementById("nonel2").style.display = "none";
+    document.getElementById("loadimg").style.display = "none";
+    setTimeout(function () {
+        document.getElementById("loading").style.display = "none";
+    }, 1000);
     var h = $(".html").attr('data-value');
     var c = $(".css").attr('data-value');
     var j = $(".js").attr('data-value');
@@ -121,7 +64,7 @@ window.addEventListener("load", function () {
         .animate({
             width: jp
         }, 1000);
-      
+
 });
 
 
@@ -132,6 +75,7 @@ var images = new Array(
 window.onscroll = function () {
     myFunction();
 };
+
 function col() {
     var sg = document.getElementById("svg");
     sg.style.fill = "#fff";
@@ -160,6 +104,7 @@ function myFunction() {
 }
 
 $('div').bind('inview', monitor);
+
 function monitor(event, visible) {
     if (visible) {
         $("#anime")
@@ -178,8 +123,7 @@ function monitor(event, visible) {
             .animate({
                 width: p
             }, 1000);
-    }
-    else {
+    } else {
         // element has gone out of the viewport
     }
 }
