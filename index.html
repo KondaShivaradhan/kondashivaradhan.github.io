@@ -134,7 +134,7 @@
     </style>
 </head>
 
-<body onload="col(),sun()">
+<body onload="col(),sun(),ageCalc()">
     <div id="loading">
         <center>
             <div class="jumbotron" id="jumbo">
@@ -167,8 +167,6 @@
                             <li><i onclick="mon()" class="fa fa-moon-o" title="Night Mode"></i></li>-->
                                 <li><a href="#intro" title="About myself"><i class="fa fa-user"></i></a>
                                 </li>
-
-
                                 <li><a href="#skills" title="Education"><i class="fa fa-book"></i></a></li>
                                 <li><a href="#connect" title="Socialmedia"><i class="fa fa-handshake-o"></i></a>
                                     <li><a href="#gaming" title="About my Gaming skills"><i class="fa fa-gamepad"></i></a>
@@ -250,6 +248,7 @@
             <div>
                 <p>
                     <i> "<br>Hello! My Name is <i style="color:rgb(250, 227, 196)" class="fa fa-user"></i> Konda Shivaradhan.
+                    <i id="age">aged</i>
                     <br> Passionate about computers and its related works which urges me to explore various technologies and learn new concepts every day
                     <br>looking forward to expertise my skills in various fields of programming.
                     <br>Also good at

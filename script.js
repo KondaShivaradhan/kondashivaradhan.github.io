@@ -149,3 +149,24 @@ $('.skills').on('inview', function(event, isInView) {
         // element has gone out of viewport
     }
 });
+
+// Age calculator
+function ageCalc() {
+    var minutes = 1000 * 60;
+    var hours = minutes * 60;
+    var days = hours * 24;
+    var years = days * 365.25;
+
+    d = new Date("1998/05/18");
+    dt = d.getDate();
+    mn = d.getMonth();
+    mn++;
+    yy = d.getFullYear();
+    var date1 = new Date(mn + "/" + dt + "/" + yy);
+    var date2 = new Date();
+    var timeDiff = (date2.getTime() - date1.getTime());
+    var age = (timeDiff / years);
+    age = parseFloat(Math.round(age * 100000000000) / 100000000000).toFixed(0);
+    document.getElementById("age").innerHTML = age + " Years old";
+
+}
