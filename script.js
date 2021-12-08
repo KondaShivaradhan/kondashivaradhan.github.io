@@ -166,7 +166,11 @@ function ageCalc() {
     var date2 = new Date();
     var timeDiff = (date2.getTime() - date1.getTime());
     var age = (timeDiff / years);
-    age = parseFloat(Math.round(age * 100000000000) / 100000000000).toFixed(0);
+    console.log(age);
+
+    age = ((age)).toFixed(1);
+    console.log(age);
+
     document.getElementById("age").innerHTML = age + " Years old";
 
 }
